@@ -1,0 +1,24 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Random;
+
+/**
+ *
+ * @author dani__000
+ */
+public class punto_5 {
+    
+    public int random(){
+        int aleatorio = 0;
+        
+        Random rnd = new Random();
+        
+        // Inicializar el array
+        for (long i=0; i < 1; i++) {//aca indico la cantidad de numeros ramdon que deseo generar en este caso solo 1
+            aleatorio=(rnd.nextInt(3001)+1);//genera numeros aleatrios con la sentencia (3001)+1) de lo contrario lo generaria hasta el 2999 he imprime el resultado
+            aleatorio = aleatorio%3000+1;
+            System.out.println("El numero ramdon generado es"+"\n"+aleatorio);
+            }
+            }
+            }
