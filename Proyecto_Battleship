@@ -1,0 +1,38 @@
+public static void main(String[] args) {
+        
+        int elementos_jugador_1=0,elementos_jugador_2=0, largo_tablero_1=0, ancho_tablero_2=0;
+        String jugador_1, jugador_2;
+        boolean validar=true;
+        char continuar;
+        
+        Scanner teclado = new Scanner(System.in);
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+
+        do { 
+            System.out.println("Digite el nombre para el jugador #1");
+            jugador_1=String.valueOf(teclado.nextLine());
+            
+            System.out.println("Digite el nombre para el jugador #2");
+            jugador_2=String.valueOf(teclado.nextLine());
+            System.out.println("Digite el tamaño del tablero para el largo");
+            largo_tablero_1 = Integer.parseInt(teclado.nextLine());
+            System.out.println("Digite el tamaño del tablero para el ancho");
+            ancho_tablero_2 = Integer.parseInt(teclado.nextLine());
+            System.out.println("Digite la cantidad de elementos con los que desea participar jugador 1");
+            elementos_jugador_1=Integer.parseInt(teclado.nextLine());
+            System.out.println("Digite la cantidad de elementos con los que desea participar jugador 2");
+            elementos_jugador_2=Integer.parseInt(teclado.nextLine());
+            System.out.println("Desea jugar otra partida"+"\n"+"S/N");
+            continuar=teclado.nextLine().charAt(0);
+            if ((continuar=='S')||(continuar=='s')){
+                    validar=true;
+                }
+                if ((continuar=='N')||(continuar=='n')){
+                    validar=false;
+                }   
+        } while (validar);
+        
+        // TODO code application logic here
+    }
+    
+}
