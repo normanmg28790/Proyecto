@@ -1,0 +1,76 @@
+public class ClaseJugador2 {
+    public static String nombreJugador;
+    public static int cantidadElementos;
+    public static int anchoMatriz2;
+    public static int largoMatriz2;
+    public static String[][] matriz2;
+    private static String nombreJugador2;
+
+    public static String getNombreJugador() {
+        return nombreJugador2;
+    }
+
+    public static void setNombreJugador2(String nombreJugador2) {
+        ClaseJugador2.nombreJugador2 = nombreJugador2;
+    }
+
+    public static int getCantidadElementos() {
+        return cantidadElementos;
+    }
+
+    public static void setCantidadElementos(int cantidadElementos) {
+        ClaseJugador2.cantidadElementos = cantidadElementos;
+    }
+
+    public static int getAnchoMatriz2() {
+        return anchoMatriz2;
+    }
+
+    public static void setAnchoMatriz2(int anchoMatriz2) {
+        ClaseJugador2.anchoMatriz2 = anchoMatriz2;
+    }
+
+    public static int getLargoMatriz2() {
+        return largoMatriz2;
+    }
+
+    public static void setLargoMatriz2(int largoMatriz2) {
+        ClaseJugador2.largoMatriz2 = largoMatriz2;
+    }
+
+    public static void tamañoMatriz2() {
+        matriz2 = new String[largoMatriz2][anchoMatriz2];
+    }
+
+    public void llenarMatriz2() {
+        tamañoMatriz2();
+        Random r = new Random();
+        int contador = 0;
+        for (int i = 0; i < largoMatriz2; i++) {
+            for (int j = 0; j < anchoMatriz2; j++) {
+                matriz2[i][j] = "O";
+            }
+        }
+        for (int i = 0; i < largoMatriz2; i++) {
+            for (int j = 0; j < anchoMatriz2; j++) {
+                if (contador < cantidadElementos) {
+                    int posicion1 = (int) (r.nextDouble() * largoMatriz2);
+                    int posicion2 = (int) (r.nextDouble() * anchoMatriz2);
+                    matriz2[posicion1][posicion2] = "A";
+                    contador++;
+                }
+            }
+        }
+    }
+
+    public void verMatriz2() {
+
+        for (int i = 0; i < matriz2.length; i++) {
+            for (int j = 0; j < matriz2[i].length; j++) {
+                System.out.print(matriz2[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+}
